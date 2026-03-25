@@ -47,14 +47,18 @@ export default function Home() {
         }
       };
 
-      const res = await axios.post("http://localhost:8000/analyze", payload);
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+      const res = await axios.post(`${apiUrl}/analyze`, payload);
       setResult(res.data);
+      if (activeStep === 1) {
+        setActiveStep(2);
+      }
       if (res.data.extracted_text) {
          setContent(res.data.extracted_text);
       }
-    } catch (error) {
-      console.error(error);
-      alert("Analysis failed. Ensure backend is running at http://localhost:8000");
+    } catch (err: any) {
+      console.error(err);
+      alert("Analysis failed. Ensure backend is running or API URL is configured.");
     } finally {
       setLoading(false);
     }
