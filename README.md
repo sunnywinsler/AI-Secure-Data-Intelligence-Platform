@@ -1,5 +1,7 @@
 # AI Secure Data Intelligence Platform
 
+🚀 **Live Frontend Demo:** [https://ai-secure-data-intelligence-platform.vercel.app](https://ai-secure-data-intelligence-platform.vercel.app)  
+⚙️ **Live Backend API:** [https://ai-secure-data-intelligence-platform-phze.onrender.com](https://ai-secure-data-intelligence-platform-phze.onrender.com)
 An end-to-end platform acting as an AI Gateway, Data Scanner, Log Analyzer, and Risk Engine. The system analyzes ingested data (files, text, logs) for sensitive entities like PII and credentials, calculates a security risk score, and generates actionable AI insights.
 
 ## Project Structure
